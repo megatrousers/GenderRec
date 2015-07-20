@@ -2,7 +2,28 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+    <Grid Margin="4">
+        <Border Background="GhostWhite" BorderBrush="LightGray" BorderThickness="1" CornerRadius="5">
+            <ItemsControl Margin="4">
+                <Button Content="Load Test Data" Margin="0,0,410.8,0" Click="Button_Click"/>
+                <TabControl HorizontalAlignment="Left" Height="221" Width="283">
+                    <TabItem Name="TabItem1" Header="TabItem1" HorizontalAlignment="Left" Margin="-2,-2,-2.4,-1" Width="62">
+                        <Grid Name="Grid1" Margin="10,10,0.6,2.4">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="152" />
+                                <RowDefinition Height="24" />
+                            </Grid.RowDefinitions>
+                            <ComboBox Name="CB1" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="1" VerticalAlignment="Top" Width="120" SelectionChanged="CB1_SelectionChanged"/>
+                            <Image Name ="Image1" HorizontalAlignment="Left" Height="132" Margin="10,10,0,0" VerticalAlignment="Top" Width="243"/>
+
+                        </Grid>
+                    </TabItem> />
+                    <TabItem Name="TabItem2" Header="TabItem2" HorizontalAlignment="Left" Margin="-2,-2,-2.4,-1" Width="62"/>
+
+
+                </TabControl>
+            </ItemsControl>
+        </Border>
+
     </Grid>
 </Window>
